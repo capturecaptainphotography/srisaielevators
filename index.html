@@ -171,102 +171,106 @@
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5">
-    <div class="owl-carousel header-carousel position-relative">
-        
-        <!-- First Carousel Item -->
-        <div class="owl-carousel-item position-relative">
-            <img
-                src="img/elevator-banner-1.webp"
-                alt="SRI SAI ELEVATORS - Safe and Reliable Solutions"
-                class="d-block w-100"
-                style="object-fit: cover; height: 700px;"
-                loading="lazy" 
-            />
-            <div
-                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(24, 29, 56, 0.7)"
-            >
-                <div class="container text-center text-lg-start">
-                    <div class="row justify-content-lg-start justify-content-center">
-                        <div class="col-sm-10 col-lg-8">
-                            <h1 class="display-3 text-white animated fadeInUp" style="color: #ffffff;">
-                                Transform Your Journey,
-                            </h1>
-                            <h5 class="text-uppercase mb-3 animated fadeInUp delay-1s" style="color: #ffffff;">
-                                With Advanced Safety Features
-                            </h5>
-                            <p class="fs-5 text-white mb-4 pb-2 animated fadeInUp delay-2s" style="color: #dfd4ce;">
-                                At SRI SAI ELEVATORS, we provide comprehensive vertical movement solutions with the highest safety standards and innovative technology.
-                            </p>
-                            <a
-                                href="contact.html"
-                                class="btn btn-primary py-md-3 px-md-4 animated fadeInUp delay-3s"
-                                aria-label="Get a Quote"
-                            >
-                                Get a Quote
-                            </a>
-                            <a
-                                href="services.html"
-                                class="btn btn-light py-md-3 px-md-4 animated fadeInUp delay-3s"
-                                aria-label="Explore Services"
-                            >
-                                Explore Services
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="owl-carousel header-carousel position-relative">
+      
+      <!-- First Carousel Item -->
+      <div class="owl-carousel-item position-relative">
+          <img
+              src="img/elevator-banner-1.webp"
+              alt="SRI SAI ELEVATORS - Safe and Reliable Solutions"
+              class="d-block w-100"
+              style="object-fit: cover; height: 700px;"
+              loading="eager" <!-- Prioritize LCP image -->
+              width="1920" <!-- Add explicit dimensions -->
+              height="700"
+              fetchpriority="high" <!-- High priority for LCP image -->
+          />
+          <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(24, 29, 56, 0.7)"
+          >
+              <div class="container text-center text-lg-start">
+                  <div class="row justify-content-lg-start justify-content-center">
+                      <div class="col-sm-10 col-lg-8">
+                          <h1 class="display-3 text-white animated fadeInUp" style="color: #ffffff;">
+                              Transform Your Journey,
+                          </h1>
+                          <h5 class="text-uppercase mb-3 animated fadeInUp delay-1s" style="color: #ffffff;">
+                              With Advanced Safety Features
+                          </h5>
+                          <p class="fs-5 text-white mb-4 pb-2 animated fadeInUp delay-2s" style="color: #dfd4ce;">
+                              At SRI SAI ELEVATORS, we provide comprehensive vertical movement solutions with the highest safety standards and innovative technology.
+                          </p>
+                          <a
+                              href="contact.html"
+                              class="btn btn-primary py-md-3 px-md-4 animated fadeInUp delay-3s"
+                              aria-label="Get a Quote"
+                          >
+                              Get a Quote
+                          </a>
+                          <a
+                              href="services.html"
+                              class="btn btn-light py-md-3 px-md-4 animated fadeInUp delay-3s"
+                              aria-label="Explore Services"
+                          >
+                              Explore Services
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-        <!-- Second Carousel Item -->
-        <div class="owl-carousel-item position-relative">
-            <img
-                src="img/elevator-banner-2.webp"
-                alt="SRI SAI ELEVATORS - Customized Designs"
-                class="d-block w-100"
-                style="object-fit: cover; height: 700px;"
-                loading="lazy" 
-            />
-            <div
-                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(24, 29, 56, 0.7)"
-            >
-                <div class="container text-center text-lg-start">
-                    <div class="row justify-content-lg-start justify-content-center">
-                        <div class="col-sm-10 col-lg-8">
-                            <h1 class="display-3 text-white animated fadeInUp" style="color: #ffffff;">
-                                Elevator Solutions for Every Need
-                            </h1>
-                            <h5 class="text-uppercase mb-3 animated fadeInUp delay-1s" style="color: #ffffff;">
-                                Designed to Meet Your Requirements
-                            </h5>
-                            <p class="fs-5 text-white mb-4 pb-2 animated fadeInUp delay-2s" style="color: #dfd4ce;">
-                                From passenger elevators to hospital and goods lifts, we provide customized designs with rigorous quality checks at every stage.
-                            </p>
-                            <a
-                                href="contact.html"
-                                class="btn btn-primary py-md-3 px-md-4 animated fadeInUp delay-3s"
-                                aria-label="Contact Us"
-                            >
-                                Contact Us
-                            </a>
-                            <a
-                                href="lift-designs.html"
-                                class="btn btn-light py-md-3 px-md-4 animated fadeInUp delay-3s"
-                                aria-label="View Lift Designs"
-                            >
-                                View Lift Designs
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
+      <!-- Second Carousel Item -->
+      <div class="owl-carousel-item position-relative">
+          <img
+              src="img/elevator-banner-2.webp"
+              alt="SRI SAI ELEVATORS - Customized Designs"
+              class="d-block w-100"
+              style="object-fit: cover; height: 700px;"
+              loading="lazy" <!-- Lazy load non-LCP images -->
+              width="1920" <!-- Add explicit dimensions -->
+              height="700"
+          />
+          <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(24, 29, 56, 0.7)"
+          >
+              <div class="container text-center text-lg-start">
+                  <div class="row justify-content-lg-start justify-content-center">
+                      <div class="col-sm-10 col-lg-8">
+                          <h1 class="display-3 text-white animated fadeInUp" style="color: #ffffff;">
+                              Elevator Solutions for Every Need
+                          </h1>
+                          <h5 class="text-uppercase mb-3 animated fadeInUp delay-1s" style="color: #ffffff;">
+                              Designed to Meet Your Requirements
+                          </h5>
+                          <p class="fs-5 text-white mb-4 pb-2 animated fadeInUp delay-2s" style="color: #dfd4ce;">
+                              From passenger elevators to hospital and goods lifts, we provide customized designs with rigorous quality checks at every stage.
+                          </p>
+                          <a
+                              href="contact.html"
+                              class="btn btn-primary py-md-3 px-md-4 animated fadeInUp delay-3s"
+                              aria-label="Contact Us"
+                          >
+                              Contact Us
+                          </a>
+                          <a
+                              href="lift-designs.html"
+                              class="btn btn-light py-md-3 px-md-4 animated fadeInUp delay-3s"
+                              aria-label="View Lift Designs"
+                          >
+                              View Lift Designs
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+  </div>
 </div>
 <!-- Carousel End -->
-
 
 
 

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
+<head>
     <!-- Character Encoding and Viewport -->
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Ensures compatibility with older browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SRI SAI ELEVATORS - Safe and Reliable Elevator Solutions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> <!-- Optimized viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Meta Keywords and Description -->
     <meta name="keywords" content="elevator solutions, hospital elevators, goods elevators, passenger elevators, elevator safety features, custom elevator designs, elevator installation, elevator maintenance, Chittoor elevators" />
-    <meta name="description" content="SRI SAI ELEVATORS provides comprehensive vertical movement solutions with advanced safety features and custom designs. We specialize in passenger, hospital, and goods elevators." />
+    <meta name="description" content="SRI SAI ELEVATORS provides comprehensive vertical movement solutions with advanced safety features and custom designs." />
 
     <!-- Open Graph Tags for Social Media SEO -->
     <meta property="og:title" content="SRI SAI ELEVATORS - Safe and Reliable Elevator Solutions" />
@@ -26,7 +25,7 @@
     <meta name="twitter:image" content="https://srisaielevator.com/img/logo/sri-sai-elevator-logo.webp" />
 
     <!-- Favicon -->
-    <link rel="icon" href="img/logo/sri-sai-elevator-logo.webp" type="image/webp"> <!-- Use WebP for faster loading -->
+    <link rel="icon" href="img/logo/sri-sai-elevator-logo.webp" type="image/webp">
 
     <!-- Schema Markup for Local Business -->
     <script type="application/ld+json">
@@ -35,8 +34,8 @@
       "@type": "LocalBusiness",
       "name": "SRI SAI ELEVATORS",
       "url": "https://srisaielevator.com",
-      "logo": "https://srisaielevator.com/img/logo/sri-sai-elevator-logo.webp", <!-- Updated to WebP -->
-      "description": "SRI SAI ELEVATORS offers safe, reliable, and innovative elevator solutions tailored to meet client needs. We specialize in passenger, hospital, and goods elevators with advanced safety features.",
+      "logo": "https://srisaielevator.com/img/logo/sri-sai-elevator-logo.webp",
+      "description": "SRI SAI ELEVATORS offers safe, reliable, and innovative elevator solutions tailored to meet client needs.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2-201/5A, C M T Road, Revenue Ward No 2",
@@ -68,35 +67,68 @@
     <!-- Minified and Optimized Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet (Minified) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" /> <!-- Reduced redundancy -->
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <!-- Libraries Stylesheet (Deferred Loading) -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" media="print" onload="this.media='all'"> <!-- Deferred CSS -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'"> <!-- Deferred CSS -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Customized Bootstrap Stylesheet (Deferred Loading) -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'"> <!-- Deferred CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Template Stylesheet (Deferred Loading) -->
-    <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'"> <!-- Deferred CSS -->
-  </head>
+    <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-        <div
-            class="spinner-border text-primary"
-            style="width: 3rem; height: 3rem"
-            role="status"
-        >
-            <span class="visually-hidden">Loading...</span> <!-- Improved accessibility -->
-        </div>
-    </div>
-    <!-- Spinner End -->
+<body>
+ <!-- Spinner Start -->
+<div
+id="spinner"
+class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+style="z-index: 9999;" 
+>
+<div
+    class="spinner-border text-primary"
+    style="width: 3rem; height: 3rem;"
+    role="status"
+>
+    <span class="visually-hidden">Loading...</span> <!-- Improved accessibility -->
+</div>
+</div>
+<!-- Spinner End -->
+
+<!-- Hide All Content Initially -->
+<style>
+body > :not(#spinner) {
+    visibility: hidden; /* Use visibility instead of display */
+    opacity: 0; /* Ensure smooth fade-in effect */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+</style>
+
+<!-- Remove Spinner After Page Load -->
+<script>
+// Ensure the spinner is visible immediately on page load
+document.addEventListener("DOMContentLoaded", function () {
+    const spinner = document.getElementById('spinner');
+    if (spinner) {
+        // Show the rest of the content
+        document.querySelectorAll('body > :not(#spinner)').forEach(el => {
+            el.style.visibility = 'visible'; // Make content visible
+            el.style.opacity = '1'; // Fade in the content
+        });
+
+        // Hide spinner after the page has fully loaded
+        window.setTimeout(() => {
+            spinner.style.display = 'none';
+        }, 500); // Optional delay to ensure smooth transition
+    }
+});
+</script>
+
 
     <!-- Navbar Start -->
     <nav

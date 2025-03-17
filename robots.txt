@@ -1,7 +1,0 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
-User-agent: *
-Allow: /
-Allow: /img/logo/
-Sitemap: https://tsmtoursandtravels.com/sitemap.xml

@@ -1,6 +1,6 @@
 
 :root {
-  --primary: #FF5733;
+  --primary: #464bbb;
   --light: #F7F7F7;
   --dark: #2C3E50;
 }
@@ -716,14 +716,14 @@
 }
 
 .input-box input[type="submit"] {
-  background-color: #FF7F50;
+  background-color: #464bbb;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .input-box input[type="submit"]:hover {
-  background-color: #d8734e;
+  background-color: #010793;
 }
 
 
